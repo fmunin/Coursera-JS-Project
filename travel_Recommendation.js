@@ -45,10 +45,33 @@ async function loadJSON(url){
 
 function searchLocation(srchString){
     let targetArray = api_json[srchString] ;
-    result = createList(targetArray);
+    if(srchString=='countries'){
+        result = createList_Country(targetArray);
+    } else {
+        result = createList(targetArray);
+    } 
+        
+    
    let div = document.getElementById('searchResults');
    div.replaceChildren() ; //remove all children
    div.appendChild(result);
+}
+function createList_Country(countryArray){
+    let current = null;
+    let citiList = null;
+    let parentDiv = null ;
+    let resultDiv = document.createElement('div');
+    for(var index = 0 ; index<countryArray.length; index++){
+        current = countryArray[index] ;
+        parentDiv =document.createElement('div')
+        let h1Country = document.createElement('h2');
+        h1Country.appendChild(document.createTextNode(current['name']));
+        parentDiv.appendChild(h1Country);
+        parentDiv.appendChild(createList(current['cities']));
+        resultDiv.appendChild(parentDiv);
+    }
+return resultDiv ;
+
 }
 
 function createList(LocationArray){
