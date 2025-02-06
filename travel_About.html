@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sami's Travel Recommendations</title>
+        <title>Sami's Travel Recommendations - About Us</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="travel_Recommendation.css">
@@ -33,36 +33,37 @@
         <![endif]-->
     <header class="d-flex">
     <div class="container-fluid">  
-    <img src="img/topBanner.png" id="topBanner"></img> 
+      <h1 class="display-1">Sami's Travel Spot</h1>
     
     <nav class="navbar navbar-expand-lg" id="topMenu">
-        <div class="container-fluid">
-           <div class="collapse navbar-collapse" id="mainMenu">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item rounded-top"  id="home">
-                <a class="nav-link active" aria-current="page" href="./travel_Home.html">Home</a>
-              </li>         
-              <li class="nav-item rounded-top" id="xtrnlLink">
-                <a class="nav-link" href="./travel_About.html">About Us</a>
-              </li>     
-              <li class="nav-item rounded-top" id="contact">
-                <a class="nav-link" href="./travel_Contact.html"> Contact Us</a>
-              </li>
-                          </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" id="SearchEdit" placeholder="Enter Destination or Keywords" aria-label="Search">
-              <button class="btn btn-outline-success" id="SearchBtn" type="button">Search</button>
-              <button class="btn btn-outline-success" id="ClearBtn" type="button">Clear</button>
-            </form>
-          </div>
+      <div class="container-fluid">
+         <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item rounded-top"  id="home">
+              <a class="nav-link" aria-current="page" href="./travel_Home.html">Home</a>
+            </li>         
+            <li class="nav-item rounded-top" id="xtrnlLink">
+              <a class="nav-link active" href="./travel_About.html">About Us</a>
+            </li>     
+            <li class="nav-item rounded-top" id="contact">
+              <a class="nav-link" href="./travel_Contact.html"> Contact Us</a>
+            </li>
+          </ul>
+          
         </div>
-      </nav>
+      </div>
+    </nav>
     </div>
     </header>     
-    <div class="container-fluid">
+    <div class="container-fluid content">
       <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-8" id="searchResults"></div>
+        <div class="col-sm-5">
+          <h2 class="display-2">Who we are</h2>
+        </div>
+        <div class="col-sm-7" id="searchResults">
+
+        </div>
+
       </div>
     </div>
         <script src="travel_Recommendation.js" async defer></script>

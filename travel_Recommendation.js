@@ -24,12 +24,16 @@ function doAttachEvents(){
     
 }
 
-function searchBtn_click(){
-    alert('Search Btn clicked');
+function searchBtn_click(){    
+    srchString = document.getElementById('SearchEdit').value;
+    //alert('Search for ' + srchEdit.value);
+    searchLocation(srchString.toLowerCase());
 }
 
 function clearBtn_click(){
-    alert('Clear Button Clicked');
+    document.getElementById('SearchEdit').value='';
+    let div = document.getElementById('searchResults');
+    div.replaceChildren() ; //remove all children
 }
 
 async function loadJSON(url){
@@ -42,11 +46,14 @@ async function loadJSON(url){
 function searchLocation(srchString){
     let targetArray = api_json[srchString] ;
     result = createList(targetArray);
-    console.log(result);
+   let div = document.getElementById('searchResults');
+   div.replaceChildren() ; //remove all children
+   div.appendChild(result);
 }
 
 function createList(LocationArray){
  let htmlList = document.createElement('ul');
+ htmlList.setAttribute('class','list-unstyled location');
  let item = null ; //placeholder for list item
  for(var index = 0 ; index<LocationArray.length; index++){
     let localLocation = LocationArray[index] ;
@@ -61,14 +68,15 @@ function createList(LocationArray){
 
  function createIMG(url){
     let result = document.createElement('img');
-    result.setAttribute('href',url);
+    result.setAttribute('src',url);
+    result.className = "img-fluid" ; //bootstrap image size
     return result ;
  }
 
 
  function createTitle(locTitle){
     let result = document.createElement('h2');
-    result.setAttribute('class','locationTitle');
+    result.setAttribute('class','locationTitle display-5');
     result.appendChild(document.createTextNode(locTitle));
     return result ;
  }

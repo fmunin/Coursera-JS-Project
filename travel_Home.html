@@ -33,36 +33,51 @@
         <![endif]-->
     <header class="d-flex">
     <div class="container-fluid">  
-    <img src="img/topBanner.png" id="topBanner"></img> 
+   
+    <h1 class="display-1">Sami's Travel Spot</h1>
     
     <nav class="navbar navbar-expand-lg" id="topMenu">
-        <div class="container-fluid">
-           <div class="collapse navbar-collapse" id="mainMenu">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item rounded-top"  id="home">
-                <a class="nav-link active" aria-current="page" href="./travel_Home.html">Home</a>
-              </li>         
-              <li class="nav-item rounded-top" id="xtrnlLink">
-                <a class="nav-link" href="./travel_About.html">About Us</a>
-              </li>     
-              <li class="nav-item rounded-top" id="contact">
-                <a class="nav-link" href="./travel_Contact.html"> Contact Us</a>
-              </li>
-                          </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" id="SearchEdit" placeholder="Enter Destination or Keywords" aria-label="Search">
+      <div class="container-fluid">
+         <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item rounded-top"  id="home">
+              <a class="nav-link active" aria-current="page" href="./travel_Home.html">Home</a>
+            </li>         
+            <li class="nav-item rounded-top" id="xtrnlLink">
+              <a class="nav-link" href="./travel_About.html">About Us</a>
+            </li>     
+            <li class="nav-item rounded-top" id="contact">
+              <a class="nav-link" href="./travel_Contact.html"> Contact Us</a>
+            </li>
+                        </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control opacity-25" type="search" id="SearchEdit"
+               list="LocationList" 
+               placeholder="Enter Destination or Keywords" aria-label="Search">
+               <datalist id="LocationList">
+                <option value="Beaches">
+                <option value="Temples">
+                <option value="Countries">
+              </datalist>
               <button class="btn btn-outline-success" id="SearchBtn" type="button">Search</button>
-              <button class="btn btn-outline-success" id="ClearBtn" type="button">Clear</button>
-            </form>
-          </div>
+            <button class="btn btn-outline-success" id="ClearBtn" type="button">Clear</button>
+          </form>
         </div>
-      </nav>
+      </div>
+    </nav>
     </div>
     </header>     
-    <div class="container-fluid">
+    <div class="container-fluid content">
       <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-8" id="searchResults"></div>
+        <div class="col-sm-4 left-column">
+            <h4>Welcome to Sami's travel spot, your GO-TO place to review and get inspired for your next vacation.</h4>
+        <p>Use this site to search for key locations, like</p>
+        <ul><li>Beaches</li><li>Temples</li><li>Countries</li></ul>
+        <p>In addition, you can meet our crew, or reach out to us with your thougts and</p>
+          </div>
+        <div class="col-sm-8 right-column" id="searchResults">
+          
+        </div>
       </div>
     </div>
         <script src="travel_Recommendation.js" async defer></script>
